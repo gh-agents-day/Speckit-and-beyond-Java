@@ -32,11 +32,26 @@ Spec Kit is a powerful tool for defining software specifications, creating imple
 # Windows — run in PowerShell
 winget install astral-sh.uv
 
+# Windows — alternative (PowerShell, bypasses execution policy to allow the install script)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
 # macOS / Linux
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-After installation, you may need to restart your terminal or add `uv` to your PATH. Verify installation:
+After installation, you may need to restart your terminal or add `uv` to your PATH:
+
+```powershell
+# PowerShell
+$env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
+```
+
+```cmd
+# CMD
+set Path=%USERPROFILE%\.local\bin;%Path%
+```
+
+Verify installation:
 
 ```bash
 uv --version
