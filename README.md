@@ -71,8 +71,6 @@ This workshop walks you through exactly that — using GitHub's agent ecosystem 
 
 ## Get Started
 
-[![Use this Template](https://img.shields.io/badge/Use%20this%20Template-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=CanarysAutomations&template_name=Draft-Speckit-On-Java&owner=%40me&name=Draft-Speckit-On-Java&description=Agent-Driven+Spec+Development:+TaskManager+Feature+Sprint&visibility=public)
-
 Once your repo is created and cloned, run the app first:
 
 ```bash
