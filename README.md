@@ -30,6 +30,7 @@ This workshop walks you through exactly that — using GitHub's agent ecosystem 
 - **Valid GitHub Copilot subscription** (Individual, Business, or Enterprise)
 - [VS Code](https://code.visualstudio.com/download) with GitHub Copilot Chat extension
 - [Git CLI](https://git-scm.com/install/) for version control
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) installed — requires **Node.js 22+** (install via `npm install -g @github/copilot`), or use [WinGet](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli#installing-with-winget-windows) / [Homebrew](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli#installing-with-homebrew-macos-and-linux) for platform-specific options
 - [Speckit](https://github.com/github/spec-kit?tab=readme-ov-file#-get-started) installed and configured
 - [UV](https://docs.astral.sh/uv/getting-started/installation/) (for installing Spec Kit)
 
