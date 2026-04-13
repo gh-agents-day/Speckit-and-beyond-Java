@@ -8,6 +8,8 @@
 
 > **Note for participants:** This exercise builds on Exercise 2 and is required before you can do Exercises 4 and 5. The outputs (`constitution.md` and `specification.md`) are referenced in the planning and implementation steps.
 
+> **Prefer the command line?** If you'd rather work entirely from the terminal without an IDE, see [Exercise CLI — Full Workflow from the Command Line](exercise-cli.md) which consolidates all exercises into a single CLI-based guide.
+
 ---
 
 ## Goal

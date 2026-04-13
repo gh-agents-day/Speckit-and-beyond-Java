@@ -8,6 +8,8 @@
 
 > **Note for participants:** This is a required setup exercise. Exercises 3, 4, and 5 all depend on Spec Kit being installed. Complete this before moving to any of those exercises.
 
+> **Prefer the command line?** If you'd rather work entirely from the terminal without an IDE, see [Exercise CLI — Full Workflow from the Command Line](exercise-cli.md) which consolidates all exercises into a single CLI-based guide.
+
 ---
 
 ## Goal

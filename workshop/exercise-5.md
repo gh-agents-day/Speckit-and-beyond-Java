@@ -10,6 +10,8 @@
 
 Use `/speckit.implement` to generate the code for all three features across the full stack — model, service, controller, and frontend — and verify the app works correctly.
 
+> **Prefer the command line?** If you'd rather work entirely from the terminal without an IDE, see [Exercise CLI — Full Workflow from the Command Line](exercise-cli.md) which consolidates all exercises into a single CLI-based guide.
+
 ---
 
 ## Context

@@ -8,6 +8,8 @@
 
 > **Note for participants:** This exercise depends on the outputs of Exercise 3. The `plan.md` and `tasks.md` files generated here are used directly during implementation in Exercise 5.
 
+> **Prefer the command line?** If you'd rather work entirely from the terminal without an IDE, see [Exercise CLI — Full Workflow from the Command Line](exercise-cli.md) which consolidates all exercises into a single CLI-based guide.
+
 ---
 
 ## Goal
@@ -85,6 +87,7 @@ Order by: Priority Support first (it unblocks the filter feature), then Search, 
 ## Expected Output
 
 `plan.md` should contain five sections:
+
 - **Summary** — one paragraph describing the overall implementation approach and which layers are touched
 - **Technical Context** — the confirmed tech stack (language, dependencies, storage, constraints, platform)
 - **Constitution Check** — a table verifying each governing principle passes before implementation begins

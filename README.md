@@ -48,6 +48,8 @@ This workshop walks you through exactly that — using GitHub's agent ecosystem 
 | 5    | [Exercise 5](workshop/exercise-5.md) | Implement All Three Features         | ~10 min     |
 | —    | **Total**                            |                                      | **~33 min** |
 
+> **Prefer the CLI?** [Exercise CLI](workshop/exercise-cli.md) consolidates all five exercises into a single Copilot CLI-based flow using `@.github/prompts/` prompt files — no IDE required.
+
 ---
 
 ## Features You'll Build

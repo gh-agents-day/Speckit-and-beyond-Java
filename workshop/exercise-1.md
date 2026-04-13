@@ -2,6 +2,8 @@
 
 > **Goal:** Create a GitHub Copilot agent that analyses the TaskManager codebase and generates a gap summary for the three features you need to build.
 
+> **Prefer the command line?** If you'd rather work entirely from the terminal without an IDE, see [Exercise CLI — Full Workflow from the Command Line](exercise-cli.md) which consolidates all exercises into a single CLI-based guide.
+
 ---
 
 ## Context
