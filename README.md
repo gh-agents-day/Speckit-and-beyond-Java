@@ -38,6 +38,14 @@ This workshop walks you through exactly that — using GitHub's agent ecosystem 
 
 ---
 
+## Model Usage and Cost Estimate
+
+| ModelUsed | Tokens Consumed | Price |
+| --- | --- | --- |
+| Claude Sonnet 4.6 | Approx 7.5 million | Approx $4.86 |
+
+---
+
 ## Workshop Structure
 
 | Step | Exercise                             | Topic                                | Time        |
