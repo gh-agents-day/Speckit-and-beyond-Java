@@ -34,14 +34,15 @@ The specification defines **what** to build. This exercise creates:
 ```
 /speckit.plan
 
-Create a technical implementation plan for adding priority support, search, and
-filters to the TaskManager Spring Boot application.
+Create a technical implementation plan for priority support, search, and filters in this Spring Boot app:
 
-Detail:
-- Implementation sequence across layers (model → repository → service → controller → UI)
-- How each feature should be phased to keep the app functional throughout
-- Testing strategy for the service layer changes
-- How search and filter query parameters interact with each other
+- Layer sequence: model → repository → service → controller → UI
+
+- Each phase must keep the app functional
+
+- How search and filter query params interact
+
+- Testing strategy for service layer changes
 ```
 
 > Spec Kit creates `.specify/plan.md`.
@@ -57,13 +58,14 @@ Detail:
 ```
 /speckit.tasks
 
-Generate actionable implementation tasks from the plan.
-For each feature phase include:
-- Clear task description
+Generate implementation tasks from the plan. For each task include:
+- Exact file path
+- Specific change required
 - Acceptance criteria
-- Dependencies on other tasks
+- Dependencies
 
-Order by: Priority Support first (it unblocks the filter feature), then Search, then Filters.
+Order: Priority Support first (unblocks filters), then Search, then Filters. Mark tasks touching different files as parallelisable.
+
 ```
 
 > Spec Kit creates `.specify/tasks.md`.

@@ -38,33 +38,54 @@ This is the baseline you're about to improve. Keep the app running as you work t
 
 ## Step 1 — Create the Codebase Analyser Agent
 
+### First option: 
+   Use the inline chat in VS Code to create the agent file.
+
+1. Click on "**Open Customizations**" on the top right copilot chat panel
+2. Click on dropdown "**Create New Agent**" and select "**New Agent(Workspace)**" to create the agent file in the current workspace
+3. Name your agent "Codebase Analyser" the file path at which it gets created is `.github/agents/codebase-analyser.agent.md`
+4. In the file codebase-analyser-agent.md file click on "**ctrl+i**" to open the inline chat and ask copilot to generate the content based on the instructions below.
+5. Paste the following content into the agent file:
+
+   ```
+   ---
+   name: Codebase Analyser
+   description: Analyses a codebase and produces a structured gap report for requested features.
+   tools: [read, search]
+   ---
+   You are a senior software engineer performing a gap analysis.
+   Given a list of features to build:
+   1. Explore the project structure (model, repository, service, controller, frontend)
+   2. Read the relevant source files in each layer
+   3. Return only a markdown table — no prose:
+   | Layer | What Exists | What Is Missing |
+   | ----- | ----------- | --------------- |
+   One row per layer. Ask for features if not provided.
+   ```
+
+### Second option: 
+   Create the file using the copilot chat
+
 1. Open **Copilot Chat** in VS Code
 2. Type `/create-agent` and send the following as your prompt:
 
    ```
-   Create a custom agent called "Codebase Analyser" at .github/agents/codebase-analyser.agent.md with the following content:
+   Create a custom agent at .github/agents/codebase-analyser.agent.md:
 
    ---
    name: Codebase Analyser
-   description: Analyses any codebase and produces a structured gap report based on the features the user wants to build.
+   description: Analyses a codebase and produces a structured gap report for requested features.
    tools: [read, search]
    ---
-
-   You are a senior software engineer performing a codebase gap analysis.
-
-   When the user describes a set of features they want to build, you will:
-
-   1. Explore the project structure to identify the key layers (model, repository, service, controller, and frontend if present)
+   You are a senior software engineer performing a gap analysis.
+   Given a list of features to build:
+   1. Explore the project structure (model, repository, service, controller, frontend)
    2. Read the relevant source files in each layer
-   3. For each layer, determine what is currently implemented and what is missing to support the requested features
-   4. Output a structured gap summary as a markdown table with the following columns:
-
+   3. Return only a markdown table — no prose:
    | Layer | What Exists | What Is Missing |
    | ----- | ----------- | --------------- |
+   One row per layer. Ask for features if not provided.
 
-   One row per layer. Do not output prose — only the table.
-
-   Ask the user for the features they want to build if they have not already provided them. Be thorough — check all relevant files across the full stack before producing your summary.
    ```
 
 3. Review and accept the generated file.
@@ -78,12 +99,13 @@ This is the baseline you're about to improve. Keep the app running as you work t
 3. Send the following message:
 
 ```
-I need to add three features to this project:
-1. Priority Support — a priority field (HIGH, MEDIUM, LOW) on tasks with full CRUD support
-2. Search Bar — keyword search across title, description, category, and assignee
-3. Status / Priority / Category Filters — dropdown filters on the task table
+Analyse the codebase for these three features:
+1. Priority Support — priority field (HIGH/MEDIUM/LOW) with full CRUD
+2. Search Bar — keyword search across title, description, category, assignee
+3. Status/Priority/Category Filters — combinable dropdown filters on the task table
 
-Analyse the codebase and tell me what exists and what is missing for each of these features.
+Return the gap summary table only.
+
 ```
 
 4. Review the output. The agent will read each file and return a structured gap summary.

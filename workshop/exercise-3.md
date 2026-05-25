@@ -37,23 +37,19 @@ The TaskManager app needs three new features added across all layers:
 ```
 /speckit.constitution
 
-Generate a constitution that captures the governing standards and principles for
-this application — not for any specific feature, but as the lasting rules that
-all future development must follow. Cover:
+Define governing standards for this application — not for any specific feature, but as lasting rules all future development must follow:
 
-1. Architecture — layered structure (model → repository → service → controller → UI);
-   each layer has a single responsibility and must not bypass the one above it
-2. Data Storage — `data/tasks.json` is the single source of truth; all reads and
-   writes go through `TaskRepository`; no layer may access the file directly
-3. Field Naming — field names in the `Task` model, the JSON store, the REST API
-   response, and the UI must be identical; no aliasing or renaming between layers
-4. Validation — all input validation and business rule enforcement happens in
-   `TaskService`; `TaskController` does not validate; `TaskRepository` does not validate
-5. Frontend Standards — the UI is a single-page vanilla JS app; data is fetched
-   from the backend on each operation; only edit state (`editingId`) is held in memory;
-   the page does not reload to reflect data changes
-6. Code Quality — no business logic in the controller; no file I/O outside the
-   repository; no inline styles or scripts added to `index.html` outside its existing structure
+1. Architecture — model → repository → service → controller → UI; each layer has a single responsibility; no layer bypasses the one above it.
+
+2. Data Storage — data/tasks.json is the single source of truth; all reads/writes go through TaskRepository only.
+
+3. Field Naming — field names must be identical across model, JSON store, REST API, and UI; no aliasing between layers.
+
+4. Validation — all validation and business rules live in TaskService only; controller and repository do not validate.
+
+5. Frontend — single-page vanilla JS; data fetched from backend per operation; only editingId held in memory; no page reloads.
+
+6. Code Quality — no business logic in controller; no file I/O outside repository; no inline styles/scripts outside existing index.html structure
 ```
 
 > Spec Kit creates `.specify/constitution.md`.
@@ -69,26 +65,14 @@ all future development must follow. Cover:
 ```
 /speckit.specify
 
-Extend the TaskManager Spring Boot app following the constitution:
+Extend the TaskManager Spring Boot app per the constitution:
 
-1. Priority Support
-   - Add a `priority` field (HIGH, MEDIUM, LOW) to the Task model
-   - Persist and return priority in all CRUD operations
-   - Show priority as a dropdown field in the create and edit form
-   - Display the priority value as a column in the task table
+1. Priority Support — add priority field (HIGH/MEDIUM/LOW) to Task model; persist and return in all CRUD; show as dropdown in create/edit form; display as table column.
 
-2. Search Bar
-   - Add keyword search support to the service layer with an optional `search` parameter
-   - Search across title, description, category, and assignedTo fields (case-insensitive)
-   - Frontend: a search input above the task table that filters results in real time
+2. Search Bar — optional search param in service layer; case-insensitive match across title, description, category, assignedTo; real-time filter input above task table.
 
-3. Status / Priority / Category Filters
-   - Add filter support to the service layer with optional `status`, `priority`, and `category` parameters
-   - Filters can be combined with each other and with search
-   - Frontend: three dropdown controls above the task table
+3. Filters — optional status, priority, category params in service layer; combinable with each other and with search; three dropdowns above task table
 
-UI layout: the search bar and all three filter dropdowns (Status, Priority, Category)
-must appear on a single row above the task table.
 ```
 
 > Spec Kit creates `.specify/specification.md`.

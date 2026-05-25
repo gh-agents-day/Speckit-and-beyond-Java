@@ -27,15 +27,12 @@ You have a governed specification and a phased task list. Now you hand it to Spe
 ```
 /speckit.implement
 
-Implement all tasks from tasks.md following the specification and plan:
-- Phase 1: Priority Support — priority field across model, service, controller, and UI
-- Phase 2: Search — keyword search across the backend and frontend
-- Phase 3: Filters — status, priority, and category filters across the backend and frontend
+Implement all tasks from tasks.md:
+- Phase 1: Priority Support — priority field across model, service, controller, UI
+- Phase 2: Search — keyword search across backend and frontend
+- Phase 3: Filters — status, priority, category filters across backend and frontend
 
-UI layout: the search bar and all three filter dropdowns (Status, Priority, Category)
-must appear on a single row above the task table. Use flex-wrap: nowrap so they
-never stack vertically.
-
+UI constraint: search bar and all three filter dropdowns on one row; use flex-wrap: nowrap.
 All existing CRUD operations must continue to work.
 ```
 
