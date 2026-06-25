@@ -98,12 +98,13 @@ This is the baseline you're about to improve. Keep the app running as you work t
 3. Send the following message:
 
 ```
-Analyse the codebase for these three features:
-1. Priority Support — priority field (HIGH/MEDIUM/LOW) with full CRUD
-2. Search Bar — keyword search across title, description, category, assignee
-3. Status/Priority/Category Filters — combinable dropdown filters on the task table
+Analyse the codebase for:
 
-Return the gap summary table only.
+1. Priority (HIGH/MEDIUM/LOW) with full CRUD  
+2. Search across title, description, category, assignee  
+3. Status/Priority/Category combined filters  
+
+Return ONLY the gap summary table.
 
 ```
 
