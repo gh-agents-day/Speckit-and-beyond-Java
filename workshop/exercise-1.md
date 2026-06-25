@@ -39,7 +39,6 @@ This is the baseline you're about to improve. Keep the app running as you work t
 ## Step 1 — Create the Codebase Analyser Agent
 
 ### First option: 
-   Use the inline chat in VS Code to create the agent file.
 
 1. Click on "**Open Customizations**" on the top right copilot chat panel
 2. Click on dropdown "**Create New Agent**" and select "**New Agent(Workspace)**" to create the agent file in the current workspace
